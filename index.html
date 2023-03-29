@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" ></script>
+    <link rel="stylesheet" type="text/css" href="https://qiscus-sdk.s3-ap-southeast-1.amazonaws.com/web/v2.6.5/qiscus-sdk.2.6.5.css">
+</head>
+<body>
+
+    <nav class="bomb-menu right-menu ">
+        <button class="menu-toggle-btn">
+          <svg class="menu-icon" viewBox="0, 0, 52, 52">
+            <line class="line line1" x1="13" y1="18" x2="39" y2="18" stroke="#666" stroke-width="3" />
+            <line class="line line2" x1="13" y1="26" x2="39" y2="26" stroke="#666" stroke-width="3" />
+            <line class="line line3" x1="13" y1="34" x2="39" y2="34" stroke="#666" stroke-width="3" />
+          </svg>
+        </button>
+      
+        <ul>
+          <li class="menu-item mi-1">
+            <a href="#home" title="Home">
+              <i class="menu-item-icon fa fa-home"></i>
+            </a>
+          </li>
+          <li class="menu-item mi-2">
+            <a href="#about" title="About">
+              <i class="menu-item-icon fa fa-question"></i>
+            </a>
+          </li>
+          <li class="menu-item mi-3">
+            <a href="#contact" title="Contact">
+              <i class="menu-item-icon fa fa-paper-plane"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+
+<div class="header">
+
+<!--Content before waves-->
+<div class="inner-header flex">
+<!--Just the logo.. Don't mind this-->
+<svg version="1.1" class="logo" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" xml:space="preserve">
+<path fill="#FFFFFF" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M57,283" />
+<g><path fill="#fff"
+d="M250.4,0.8C112.7,0.8,1,112.4,1,250.2c0,137.7,111.7,249.4,249.4,249.4c137.7,0,249.4-111.7,249.4-249.4
+C499.8,112.4,388.1,0.8,250.4,0.8z M383.8,326.3c-62,0-101.4-14.1-117.6-46.3c-17.1-34.1-2.3-75.4,13.2-104.1
+c-22.4,3-38.4,9.2-47.8,18.3c-11.2,10.9-13.6,26.7-16.3,45c-3.1,20.8-6.6,44.4-25.3,62.4c-19.8,19.1-51.6,26.9-100.2,24.6l1.8-39.7		c35.9,1.6,59.7-2.9,70.8-13.6c8.9-8.6,11.1-22.9,13.5-39.6c6.3-42,14.8-99.4,141.4-99.4h41L333,166c-12.6,16-45.4,68.2-31.2,96.2	c9.2,18.3,41.5,25.6,91.2,24.2l1.1,39.8C390.5,326.2,387.1,326.3,383.8,326.3z" />
+</g>
+</svg>
+<h1>Caramel.ai</h1>
+</div>
+
+<!--Waves Container-->
+<div>
+<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+<defs>
+<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="parallax">
+<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+</g>
+</svg>
+</div>
+<!--Waves end-->
+
+</div>
+<!--Header ends-->
+
+<!--Content starts-->
+<div class="content flex">
+  <p></p>
+</div>
+<!--Content ends-->
+  
+  
+  <div class="wrap__chat--main">
+  <div class="chat__main">
+  <div class="wrap__chat--top">
+    <div class="chat__top--text">
+      <div class="chat__bot--online">
+        <span class="material-icons">
+          account_circle
+        </span>
+      </div>
+      <span class="text__component">
+        ChatBot online
+      </span>
+    </div>
+    
+    <div class="chat__icon--close">
+      <span class="material-icons">close</span>
+    </div>
+  </div>
+   
+  <div class="wrap__message--block">
+    <div class="wrap__message--list">
+      <div class="list__message">
+    
+      </div>
+      </div>
+    </div>
+  </div>  
+  
+  <div class="wrap__message--send">
+    <input
+      value=""
+      placeholder='Your messsage'  
+      class="message__send--input"/>
+    
+      <div class="message__send--btn">
+          <div class="icon__btn">
+            <span class="material-icons">send</span>
+          </div>
+      </div>
+  </div>
+</div>
+  
+<div class="chat js-chat">
+  <div class="chat__icon">
+<span class="material-icons">
+fingerprint
+</span>
+  </div>
+</div>
+</div>
+</body>
+</html>
