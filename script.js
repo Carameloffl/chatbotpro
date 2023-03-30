@@ -28,6 +28,11 @@ function forEach(nodeList, callback) {
 		callback.call(nodeList[i]);
 	}
 }
+
+/* 
+ChatBot Functions and Callbacks
+*/
+
 function chatbot(){
 const btnIconChat = document.querySelector('.chat');
 const mainChat = document.querySelector('.wrap__chat--main');
