@@ -1,42 +1,6 @@
-body,#cont {
 
-    width: 100%;margin:0px;padding:0px;
-    height: 100vh;
-    font-family:  sans-serif;
-  background: 	#87CEEB;
-    position: fixed;
-    
-  }
-  #cont{
-      display: grid;width: 100%;height: 100vh;
-    grid-template-rows:13% 75% 12%;
-  }
-  #top{
-    background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-  color:white;
-      display: flex;
-      width: 100%;height: 100%;justify-content: center;
-  }
-  #botimg{
-     
-      width:7%;height: 90%;
-  }
-  #botimg img{
-      width:100%;height:100%;
-  }
-  #top-chat{
-    
-      width:95%;
-      height: 100%;
-      font-family: sans-serif;
-      display: flex;align-items: center;
-  }
-  #name{
-      font-size: 35px;margin-left:10px;
-  }
-  
   #chat{
-      
+     
       display: flex;width: 100%;height: 100%;
       justify-content: center;overflow-y: auto;
   }
@@ -60,7 +24,7 @@ body,#cont {
     background-color: white;
       width:30%;border:1px solid grey;
       font-family: sans-serif;
-      font-size: 15px;
+      font-size: 15px;color:black;text-align: left;
       font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       height:auto;margin-left: 10px;
       overflow-wrap: break-word;
@@ -70,7 +34,7 @@ body,#cont {
   #uc{
     background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
     color:white;
-      width:30%;
+      width:30%;text-align: left;
       font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       box-shadow: 1px 2px 10px -3px rgba(0,0,0,0.5);
       font-size: 15px;
@@ -100,7 +64,7 @@ body,#cont {
     font-size: 16px;
     box-shadow: 1px 2px 10px -3px rgba(0,0,0,0.5);color:black;
     color: #686868;border-radius: 15px;
-      height: 80%;background-color: white;
+      height: 70%;background-color: white;
       width:60%;display: flex;justify-content:center;
   }
   #nav{
@@ -404,7 +368,7 @@ body,#cont {
      #box{
         font-size: 16px;
         box-shadow: 1px 2px 10px -3px rgba(0,0,0,0.5);color:black;border-radius: 15px;
-      height: 50%;border:1px solid black;transform: translate(0px,-30px);
+      height: 30%;border:1px solid black;transform: translate(0px,-30px);
       width:80%;display: flex;justify-content:center;background-color: white;
      }
   }

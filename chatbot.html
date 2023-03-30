@@ -3,64 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="./bot.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./script/script.js" type="module"></script>
-    <script src="script.js"></script>
-    
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./bot.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" ></script>
+    <script src="script/script.js" type="module"></script>
+    <link rel="stylesheet" type="text/css" href="https://qiscus-sdk.s3-ap-southeast-1.amazonaws.com/web/v2.6.5/qiscus-sdk.2.6.5.css">
 </head>
 <body>
-    <div id="cont">
-        <div id="top">
-            <div id="top-chat">
-              <p id="name">ChatBOT</p>  
-            </div>
-        </div>
-        <div id="chat">
-            <div id="nav">
-                <nav class="bomb-menu right-menu ">
-                    <button class="menu-toggle-btn">
-                      <svg class="menu-icon" viewBox="0, 0, 52, 52">
-                        <line class="line line1" x1="13" y1="18" x2="39" y2="18" stroke="#666" stroke-width="3" />
-                        <line class="line line2" x1="13" y1="26" x2="39" y2="26" stroke="#666" stroke-width="3" />
-                        <line class="line line3" x1="13" y1="34" x2="39" y2="34" stroke="#666" stroke-width="3" />
-                      </svg>
-                    </button>
-                  
-                    <ul>
-                      <li class="menu-item mi-1">
-                        <a href="./index.html" title="Home">
-                         <img src="Assets/home.png">
-                        </a>
-                      </li>
-                      <li class="menu-item mi-2">
-                        <a href="./chatbot.html" title="About">
-                         <img src="./Assets/bot.png" alt="">
-                        </a>
-                      </li>
-                      <li class="menu-item mi-3">
-                        <a href="#contact" title="Faq">
-                         <img src="Assets/faq.png">
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-            
-            
-            </div>
-            <div id="chatbox">
-                <div id="bcmd">
-                    <div id="botc">Hi</div>
-                </div>
-               
-            </div>
-        </div>
-        <div id="textbox">
-            <div id="box">
-                <input type="text" placeholder="write your message" id="command"/><img src="./Assets/send.png" id="send" onclick="send()">
-            </div>
+
+    <nav class="bomb-menu right-menu ">
+        <button class="menu-toggle-btn">
+          <svg class="menu-icon" viewBox="0, 0, 52, 52">
+            <line class="line line1" x1="13" y1="18" x2="39" y2="18" stroke="#666" stroke-width="3" />
+            <line class="line line2" x1="13" y1="26" x2="39" y2="26" stroke="#666" stroke-width="3" />
+            <line class="line line3" x1="13" y1="34" x2="39" y2="34" stroke="#666" stroke-width="3" />
+          </svg>
+        </button>
       
+        <ul>
+          <li class="menu-item mi-1">
+            <a href="./index.html" title="Home">
+             <img src="Assets/home.png">
+            </a>
+          </li>
+          <li class="menu-item mi-2">
+            <a href="./chatbot.html" title="About">
+             <img src="./Assets/bot.png" alt="">
+            </a>
+          </li>
+          <li class="menu-item mi-3">
+            <a href="#contact" title="Faq">
+             <img src="Assets/faq.png">
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+
+<div class="header">
+
+<!--Content before waves-->
+<div class="inner-header flex">
+    <div id="chat">
+        <div id="chatbox">
+            <div id="bcmd">
+                <div id="botc">Hi</div>
+            </div>
+           
         </div>
     </div>
+</div>
+
+<!--Waves Container-->
+<div>
+<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+<defs>
+<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="parallax">
+<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+</g>
+</svg>
+</div>
+<!--Waves end-->
+
+</div>
+<!--Header ends-->
+
+<!--Content starts-->
+<div class="content flex">
+    <div id="textbox">
+        <div id="box">
+            <input type="text" placeholder="write your message" id="command"/><img src="assets/send.png" id="send" >
+        </div>
+  
+    </div>
+</div>
+</div>
 </body>
 </html>
