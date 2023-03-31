@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./bot.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/FAQ.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js" ></script>
-    <script src="script/script.js" type="module"></script>
+    <script src="../script.js" ></script>
+    <script src="../script/script.js" type="module"></script>
     <link rel="stylesheet" type="text/css" href="https://qiscus-sdk.s3-ap-southeast-1.amazonaws.com/web/v2.6.5/qiscus-sdk.2.6.5.css">
 </head>
 <body>
@@ -25,18 +25,18 @@
       
         <ul>
           <li class="menu-item mi-1">
-            <a href="./index.html" title="Home">
-             <img src="Assets/home.png">
+            <a href="../index.html" title="Home">
+             <img src="../Assets/home.png">
             </a>
           </li>
           <li class="menu-item mi-2">
-            <a href="./chatbot.html" title="About">
-             <img src="./Assets/bot.png" alt="">
+            <a href="../pages/chatbot.html" title="About">
+             <img src="../Assets/bot.png" alt="">
             </a>
           </li>
           <li class="menu-item mi-3">
-            <a href="#contact" title="Faq">
-             <img src="Assets/faq.png">
+            <a href="../pages/FAQ.html" title="Faq">
+             <img src="../Assets/faq.png">
             </a>
           </li>
         </ul>
@@ -47,14 +47,27 @@
 
 <!--Content before waves-->
 <div class="inner-header flex">
-    <div id="chat">
-        <div id="chatbox">
-            <div id="bcmd">
-                <div id="botc">Hi</div>
+   <div id="faq">
+     <div id="faq-top">
+      <h1>Frequently Asked Question</h1>
+     </div>
+     <div id="faq-cont">
+        <div id="faq-box">
+            <div id="faq-ques">
+                <div id="faq-p">
+                  <p>Use of Execute Command</p>
+                </div>
+                <div id="faq-side-but">
+                  &#8594;
+                </div>
             </div>
-           
-        </div>
-    </div>
+            <div id="faq-ans">
+              <p>The Execute command is used to perform mathematic calculation</p>
+            </div>
+       </div>
+       
+     </div>
+   </div>
 </div>
 
 <!--Waves Container-->
@@ -79,13 +92,9 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
 
 <!--Content starts-->
 <div class="content flex">
-    <div id="textbox">
-        <div id="box">
-            <input type="text" placeholder="write your message" id="command"/><img src="assets/send.png" id="send" >
-        </div>
-  
-    </div>
+   
 </div>
 </div>
+<script src="../script/faq.js"></script>
 </body>
 </html>
