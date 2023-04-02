@@ -1,7 +1,3 @@
-/* Concept for a simple animated menu
-
-   ALERT: MESSY CODE!!!
-*/
 
 
 window.onload = function() {
@@ -28,8 +24,4 @@ function forEach(nodeList, callback) {
 		callback.call(nodeList[i]);
 	}
 }
-
-/* 
-ChatBot Functions and Callbacks
-*/
 

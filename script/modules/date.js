@@ -56,16 +56,16 @@ function Month(){
 		case 7:
 		return "August"
 		break;
-		case 7:
+		case 8:
 		return "September"
 		break;		
-		case 7:
+		case 9:
 		return "October"
 		break;
-		case 7:
+		case 10:
 		return "November"
 		break;
-		case 7:
+		case 11:
 		return "December"
 		break;
 	}
