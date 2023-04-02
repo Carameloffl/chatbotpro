@@ -1,4 +1,4 @@
-import da from './command.json' assert {type: 'JSON'};
+import da from './command.json' assert {type: 'json'};
 import {datt,timee} from './modules/date.js';
 var data=da;
 
