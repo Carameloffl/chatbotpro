@@ -19,6 +19,22 @@ function Reply(command) {
   if (command == "clear") {
     document.getElementById('chatbox').innerHTML = "";
   } 
+  else if(command.slice(0,7)=="execute"){
+    var ex="";
+        for(var i=8;i<command.length;i++){
+            ex+=command[i];
+        }
+    const cont = document.getElementById('chatbox');
+    const box = document.createElement('div');
+    box.setAttribute("id", "bcmd");
+    const text = document.createElement('div');
+    text.setAttribute("id", "botc");
+    text.textContent = eval(ex);
+    box.appendChild(text);
+    cont.appendChild(box);
+    const div = document.getElementById('chat');
+    div.scrollTop = div.scrollHeight;
+  }
   else {
     let stat="normal";
     let response = "";
