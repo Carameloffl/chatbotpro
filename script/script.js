@@ -15,14 +15,14 @@ document.addEventListener("keypress", (e) => {
 });
 
 function Reply(command) {
- 
+  
   if (command == "clear") {
     document.getElementById('chatbox').innerHTML = "";
   } 
   else {
     let stat="normal";
     let response = "";
-
+    let imgs ="";
     // Check for intent match and get response
     for (const intent in data.intents) {
       const pattern = new RegExp(data.intents[intent].pattern, "i");
@@ -43,6 +43,7 @@ function Reply(command) {
         }
         else{
           stat="def";
+          imgs=data.definition[def].image;
         }
         break;
       }
@@ -80,7 +81,7 @@ function Reply(command) {
       text.setAttribute("id", "defc");
       const timg=document.createElement("div");
       const img=document.createElement("img")
-      img.setAttribute("src","../Assets/dbms.jpeg");
+      img.setAttribute("src","../Assets/"+imgs);
       timg.setAttribute("id","timg");
       timg.appendChild(img);
       const ttext=document.createElement("div");
