@@ -42,7 +42,7 @@ export const data ={
       {
         "pattern": "(what's os|os|what's the operating system|definition of os)",
         "reply":"An Operating System (OS) is a software system that manages computer hardware and software resources and provides common services for computer programs. It is a layer of software that sits between the application software and the computer hardware and enables the two to communicate and interact with each other.",
-        "image":null
+        "image":"dbms.jpeg"
       }
     ]
   }
