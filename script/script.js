@@ -1,66 +1,79 @@
-import da from './command.json' assert {type: 'json'};
-import {datt,timee} from './modules/date.js';
-var data=da;
+import da from './command.js';
 
-document.getElementById("send").addEventListener("click",()=>{
+import { datt, timee } from './modules/date.js';
+
+const data = da;
+
+document.getElementById("send").addEventListener("click", () => {
+  send();
+});
+
+document.addEventListener("keypress", (e) => {
+  if (e.key == 'Enter') {
     send();
-})
-document.addEventListener("keypress",(e)=>{if(e.key=='Enter'){send()}});
+  }
+});
 
-function Reply(command){
-    if(command=="clear"){
-        document.getElementById('chatbox').innerHTML="";
+function Reply(command) {
+  if (command == "clear") {
+    document.getElementById('chatbox').innerHTML = "";
+  } else {
+    const cont = document.getElementById('chatbox');
+    const box = document.createElement('div');
+    box.setAttribute("id", "bcmd");
+    const text = document.createElement('div');
+    text.setAttribute("id", "botc");
+    let response = "";
+
+    // Check for intent match and get response
+    for (const intent in data.intents) {
+      const pattern = new RegExp(data.intents[intent].pattern, "i");
+      if (pattern.test(command)) {
+        response = data.intents[intent].responses[Math.floor(Math.random() * data.intents[intent].responses.length)];
+        break;
+      }
     }
-    else{
-    var cont=document.getElementById('chatbox');
-    var box=document.createElement('div');
-    box.setAttribute("id","bcmd");
-    var text=document.createElement('div');
-    text.setAttribute("id","botc");
-    if((command[0]+command[1]+command[2]+command[3]+command[4]+command[5]+command[6])=="execute"){
-        var ex="";
-        for(var i=8;i<command.length;i++){
-            ex+=command[i];
-        }
-        text.textContent=eval(ex);
+
+    // If no intent match is found, return the default response
+    if (response === "") {
+      response = data.defaultResponses[Math.floor(Math.random() * data.defaultResponses.length)];
     }
-    else if((command[0]+command[1]+command[2]+command[3])=="date"){
-        text.textContent=datt;
+
+    // Handle special commands
+    if (command.slice(0, 6) === "execute") {
+      const code = command.slice(8);
+      response = eval(code);
+    } else if (command.slice(0, 4) === "date") {
+      response = datt;
+    } else if (command.slice(0, 4) === "time") {
+      response = timee;
     }
-    else if((command[0]+command[1]+command[2]+command[3])=="time"){
-        text.textContent=timee;
-    }
-    else if(data[command]!=undefined){
-        text.textContent=data[command];
-    }
-    else{
-        text.textContent="I'm sorry, I don't have the answer to that. Can you please ask me something else?";
-    }
-   
+
+    text.textContent = response;
     box.appendChild(text);
     cont.appendChild(box);
-    var div=document.getElementById('chat');
-    div.scrollTop=div.scrollHeight;
-    }
-    document.getElementById('command').value="";
-  
+    const div = document.getElementById('chat');
+    div.scrollTop = div.scrollHeight;
+  }
+
+  document.getElementById('command').value = "";
 }
-function send(){
-    var cd=document.getElementById("command").value;
-    
-    if(cd!=""){
-        var cont=document.getElementById('chatbox');
-        var box=document.createElement('div');
-        box.setAttribute("id","ucmd");
-        var text=document.createElement('div');
-        text.setAttribute("id","uc");
-        text.textContent=cd;
-        box.appendChild(text);
-        cont.appendChild(box);
-        var cmd=cd.toLowerCase();
-        Reply(cmd)
-    }
-   else{
-       alert('write any command');
-   }
+
+function send() {
+  const cd = document.getElementById("command").value;
+
+  if (cd !== "") {
+    const cont = document.getElementById('chatbox');
+    const box = document.createElement('div');
+    box.setAttribute("id", "ucmd");
+    const text = document.createElement('div');
+    text.setAttribute("id", "uc");
+    text.textContent = cd;
+    box.appendChild(text);
+    cont.appendChild(box);
+    const cmd = cd.toLowerCase();
+    Reply(cmd)
+  } else {
+    alert('Please enter a command.');
+  }
 }
