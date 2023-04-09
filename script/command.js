@@ -34,8 +34,8 @@ export const data ={
     ],
     "definition":[
       {
-        "pattern": "(what's dbms|dbms|what's the database|definition of dbms)",
-        "reply":"DBMS stands for Database Management System, and it is a software system that allows users to define, create, manage, and access databases. A database is a collection of data that is organized in a specific way to facilitate easy access and management of the data.A DBMS provides a means to store, organize, retrieve, and manipulate data in a database.",
+        "pattern": "(what's ds|ds|what's the data structures|definition of ds|data structures)",
+        "reply":"Data structures are ways of organizing and storing data in a computer program or system. They provide a way to efficiently manage and manipulate large amounts of data, allowing for faster access and processing of information. Common examples of data structures include arrays, linked lists, stacks, queues, trees, and graphs Each type of data structure has its own set of operations that can be performed on it, such as adding, removing, or accessing elements. The choice of data structure often depends on the specific requirements of a program or algorithm, as well as the characteristics of the data being stored. Efficient use of data structures is critical for creating high-performance software systems that can handle large volumes of data efficiently.",
         "image":"dbms.jpeg"
         
       },
